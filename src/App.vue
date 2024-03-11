@@ -1,14 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import Product from './components/Product.vue';
 </script>
 
 <template>
-  <HelloWorld title="Homem come maçã"
-    text="Na manhã desta madrugada, às 7 da tarde, um homem pega a maçã parte-a e a devora.."
-    author="Choquei"
-  />
+  <Product/>
 </template>
 
 <style scoped>
   
-</style>
+</style>./components/Headeer.vue./components/Product.vue
