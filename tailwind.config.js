@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+
+    extend: {
+      colors: {
+        'orange': 'hsl(26, 100%, 55%)',
+        'light-orange': 'hsl( 25, 100%, 94%)',
+      },
+      height: {
+        "6": "6px"
+      },
+      fontFamily: {
+        "principal": "Kumbh Sans"
+      }
+    },
   },
   plugins: [],
 }

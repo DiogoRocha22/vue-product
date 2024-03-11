@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --second-orange:hsl( 25, 100%, 94%);
-  --main-orange: hsl(26, 100%, 55%);
-}
-
 .btn {
-  @apply text-base font-medium rounded-lg p-3 ;
-  background-color: var(--main-orange);
+  @apply text-base font-medium rounded-lg p-3 bg-orange;
 }
 

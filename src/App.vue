@@ -1,9 +1,15 @@
 <script setup>
+  import Navbar from './components/Header.vue';
   import Product from './components/Product.vue';
 </script>
 
 <template>
-  <Product/>
+  <header>
+    <Navbar/>
+  </header>
+  <main>
+    <Product/>
+  </main>
 </template>
 
 <style scoped>
