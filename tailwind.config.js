@@ -11,6 +11,9 @@ export default {
         'orange': 'hsl(26, 100%, 55%)',
         'light-orange': 'hsl( 25, 100%, 94%)',
       },
+      width: {
+        "35%": "35%"
+      },
       height: {
         "6": "6px"
       },

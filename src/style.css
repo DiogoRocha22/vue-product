@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 .btn {
-  @apply text-base font-medium rounded-lg p-3 bg-orange;
+  @apply text-base text-white font-medium rounded-lg p-3 bg-orange;
 }
+ .btn:hover{
+  @apply opacity-80
+ }
 

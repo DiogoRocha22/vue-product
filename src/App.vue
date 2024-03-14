@@ -1,17 +1,32 @@
 <script setup>
-  import Navbar from './components/Header.vue';
+  import { watch, ref } from 'vue';
+import Navbar from './components/Header.vue';
   import Product from './components/Product.vue';
+
+  import { produto } from './mock/PRODUCTS.js'
+
+  let itens = ref(produto.onCart)
+
+  function editCart(action, value){
+    if (action == 'add'){
+      itens.value += value
+      return
+    }
+
+    return itens.value --
+  }
+
 </script>
 
 <template>
   <header>
-    <Navbar/>
+    <Navbar :ownded="itens" />
   </header>
-  <main>
-    <Product/>
-  </main>
+  
+  <Product :addCart="editCart"/>
+  
 </template>
 
 <style scoped>
   
-</style>./components/Headeer.vue./components/Product.vue
+</style>

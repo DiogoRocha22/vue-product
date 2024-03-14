@@ -3,9 +3,11 @@
     import cart from '../assets/images/icon-cart.svg'
     import avatar from '../assets/images/image-avatar.png'
 
-    import { ref } from 'vue';
+    defineProps({
+        ownded: Number,
+    })
 
-    const itens = ref(0)
+
 
 </script>
 
@@ -28,9 +30,9 @@
         <div class="flex gap-10 items-center">
             <div class="relative px-1">
                 <img class=" w-8 h-8" :src="cart" alt="">
-                <div v-if="itens && typeof itens == 'number'" class=" absolute bottom-7 right-0 bg-orange rounded-xl px-2 text-white text-xs">{{ itens }}</div>
+                <div v-if="ownded && typeof ownded == 'number'" class=" absolute bottom-7 right-0 bg-orange rounded-xl px-2 text-white text-xs">{{ ownded }}</div>
             </div>
-            <img class=" w-14" :src="avatar" alt="">
+            <img id="avatar" class=" w-14" :src="avatar" alt="">
         </div>
 
     </div>
@@ -53,6 +55,9 @@
             }
 
     img{
-        @apply cursor-pointer
+        @apply cursor-pointer 
+    }
+    #avatar:hover{
+        @apply border-orange rounded-full border-4
     }
 </style>
