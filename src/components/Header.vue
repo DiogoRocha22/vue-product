@@ -2,40 +2,57 @@
     import logo from '../assets/images/logo.svg'
     import cart from '../assets/images/icon-cart.svg'
     import avatar from '../assets/images/image-avatar.png'
+import CartView from './CartView.vue';
+import { ref, watch } from 'vue';
+import { walk } from 'vue/compiler-sfc';
 
-    defineProps({
+    const props =  defineProps({
         ownded: Number,
+        delet: Function
     })
 
-
+    let setDisplay = ref(false)
+    
+    let cartDisplay = ref('invisible')
+    
+    watch(setDisplay, () => {
+        if(setDisplay.value == true){
+            cartDisplay.value = 'flex'
+        }else{
+            cartDisplay.value = 'invisible'
+        }
+    })
 
 </script>
 
 <template>
-    <div class="border-b flex items-center justify-between">
+    <div class="border-b flex items-center justify-between relative">
         <div class="flex items-center">
             <img :src="logo" alt="">
     
             <nav class=" ml-16">
                 <ul class=" flex gap-9 ">
-                    <li>Coleção</li>
-                    <li>Masculino</li>
-                    <li>Feminino</li>
-                    <li>Sobre</li>
-                    <li>Contato</li>
+                    <li>Collections</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>About</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
         </div>
 
         <div class="flex gap-10 items-center">
-            <div class="relative px-1">
-                <img class=" w-8 h-8" :src="cart" alt="">
-                <div v-if="ownded && typeof ownded == 'number'" class=" absolute bottom-7 right-0 bg-orange rounded-xl px-2 text-white text-xs">{{ ownded }}</div>
+            <div class="relative px-1 flex justify-center">
+                <img @click="setDisplay = !setDisplay" class=" w-8 h-8" :src="cart" alt="">
+                <div v-if="ownded && typeof ownded == 'number'" class=" absolute bottom-7 right-0 bg-orange rounded-xl px-2 text-white text-xs">{{ props.ownded }}</div>
+                <CartView class="absolute top-14" :class="cartDisplay" :empty="props.ownded" :delet="props.delet"/>
             </div>
             <img id="avatar" class=" w-14" :src="avatar" alt="">
         </div>
 
     </div>
+
+    
 </template>
 
 <style scoped>

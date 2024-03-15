@@ -1,9 +1,11 @@
 <script setup>
-  import { watch, ref } from 'vue';
-import Navbar from './components/Header.vue';
+  import { ref } from 'vue';
+  import Navbar from './components/Header.vue';
   import Product from './components/Product.vue';
+ 
+  
 
-  import { produto } from './mock/PRODUCTS.js'
+  import { produto } from './mock/PRODUCTS.js';
 
   let itens = ref(produto.onCart)
 
@@ -13,14 +15,14 @@ import Navbar from './components/Header.vue';
       return
     }
 
-    return itens.value --
+    return itens.value -= 1
   }
 
 </script>
 
 <template>
   <header>
-    <Navbar :ownded="itens" />
+    <Navbar :ownded="itens" :delet="editCart" />
   </header>
   
   <Product :addCart="editCart"/>

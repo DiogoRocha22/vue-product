@@ -13,6 +13,7 @@ let active = ref(1)
 let image = produto.img1
 let counter = ref(0)
 
+
 function editCounter(action){
   if(action == 'add'){
     return counter.value++
@@ -42,13 +43,12 @@ function editCounter(action){
 
     <div class=" flex flex-col justify-center max-w-md">
       <h5 class=" text-orange font-bold">SNEAKER COMPANY</h5>
-      <h1 class=" font-bold text-5xl my-5">Fall Limited Edition Snakers</h1>
+      <h1 class=" font-bold text-5xl my-5">{{ produto.name}}</h1>
       <span class=" my-5">
-        These low-profile sneakers are your perfect casual wear companion. Featuring a durable
-        rubber outer sole, they´ll whitstand everything the weather can offer.
+        {{ produto.description }}
       </span>
       <div class="flex items-center">
-        <span class=" text-3xl font-extrabold">${{ (produto.valor * (discount/100)).toFixed(2) }}</span>
+        <span class=" text-3xl font-extrabold">${{ produto.newValor.toFixed(2) }}</span>
         <span class=" bg-light-orange text-orange font-bold mx-4 px-2 my-2">{{ discount }}%</span>
       </div>
       
@@ -63,7 +63,7 @@ function editCounter(action){
           <button class="px-3 pb-1" @click="editCounter('add')">+</button>
         </div>
 
-        <button @click=" addCart('add', counter), counter=0 " class="btn w-64 flex items-center justify-center"><img id="cart" :src="cart" alt=""> Add to cart</button>
+        <button @click=" addCart('add', counter), counter=0 " class="btn w-64 flex items-center justify-center shadow-orange shadow-2xl"><img id="cart" :src="cart" alt=""> Add to cart</button>
       </div>
     </div>
 
