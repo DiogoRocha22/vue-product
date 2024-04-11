@@ -1,115 +1,66 @@
-# Frontend Mentor - E-commerce product page solution
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+## Screenshots
 
-## Table of contents
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+# Componente de um item-commerce
 
-## Overview
+Um projeto que simula a adição de um produto a um cart, podendo tambem editar produtos do cart e ver o valor total da compra. Esse é um desafio do site frontend Mentor.
 
-### The challenge
 
-Users should be able to:
+## Aprendizados
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
+Nesse desafio aproveitei para praticar tecnologias novas cujo eu ainda não havia utilizado, tais como:
 
-### Screenshot
+- TailwindCSS: uma ferramenta de estilização bastante util que ajuda a padronizar a estilização da pagina.
 
-![](./screenshot.jpg)
+- Vue.js: Um framework bastante utilizado no mercado nos dias de hoje sendo principalmente voltado para ser um pouco mais simples e para criação de interfaces interativas.
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+## Funcionalidades
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+- Adicionar produto ao carrinho
+- Selecionar foto do produto para visualização
+- Selecionar quantos produtos você deseja adicionar ao carrinho
+- Editar produtos de dentro do carrinho e ver o valor total da compra
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
-### Links
+## Rodando localmente
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+Clone o projeto
 
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```bash
+  git clone https://github.com/DiogoRocha22/vue-product
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+Entre no diretório do projeto
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```bash
+  cd vue-product
+```
 
-### Continued development
+Instale as dependências
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+```bash
+  npm install
+```
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Inicie o servidor
 
-### Useful resources
+```bash
+  npm run start
+```
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+## Autores
 
-## Author
+- [@DiogoRocha22](https://github.com/DiogoRocha22)
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+## Referência
 
-## Acknowledgments
+ - [Frontend Mentor](https://www.frontendmentor.io/)
+ - [TailwindCSS](https://tailwindcss.com)
+ - [vueJS](https://vuejs.org)
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
